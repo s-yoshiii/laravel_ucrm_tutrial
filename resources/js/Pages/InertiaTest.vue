@@ -14,4 +14,22 @@ const newContent = ref("");
     <Link :href="route('inertia.show', { id: 50 })"
         >ルートパラメータの確認です</Link
     ><br />
+    <div class="my-8">
+        <div class="mb-4">
+            <input type="text" name="newTitle" v-model="newTitle" />
+        </div>
+        <div class="mb-4">
+            <input type="text" name="newContent" v-model="newContent" />
+        </div>
+        <Link
+            as="button"
+            method="post"
+            :href="route('inertia.store')"
+            :data="{
+                title: newTitle,
+                content: newContent,
+            }"
+            >DB保存テスト</Link
+        >
+    </div>
 </template>
