@@ -1,6 +1,9 @@
 <script setup>
 import { reactive } from "vue";
 import { Inertia } from "@inertiajs/inertia";
+defineProps({
+    errors: Object,
+});
 const form = reactive({
     title: null,
     content: null,
@@ -12,8 +15,14 @@ const submitFunction = () => {
 
 <template>
     <form @submit.prevent="submitFunction">
-        <input type="text" name="title" v-model="form.title" />
-        <input type="text" name="content" v-model="form.content" />
+        <div class="mb-4">
+            <input type="text" name="title" v-model="form.title" />
+        </div>
+        <div v-if="errors.title">{{ errors.title }}</div>
+        <div class="mb-4">
+            <input type="text" name="content" v-model="form.content" />
+        </div>
+        <div v-if="errors.content">{{ errors.content }}</div>
         <button>送信</button>
     </form>
 </template>
