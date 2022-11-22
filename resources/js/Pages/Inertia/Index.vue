@@ -1,13 +1,8 @@
+<script setup></script>
+
 <template>
-  テストです
+    <div v-if="$page.props.flash.message" class="bg-blue-300">
+        {{ $page.props.flash.message }}
+    </div>
 </template>
-
-<script>
-export default {
-
-}
-</script>
-
-<style>
-
-</style>
+<style></style>
