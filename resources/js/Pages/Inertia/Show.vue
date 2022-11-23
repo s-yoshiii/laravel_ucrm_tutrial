@@ -1,15 +1,13 @@
 <script setup>
- defineProps({
-  id:String
- })
+defineProps({
+    id: String,
+    blog: Array,
+});
 </script>
 
-
 <template>
-  {{ id }}
+    {{ id }}<br />
+    {{ blog.title }}
 </template>
 
-
-<style>
-
-</style>
+<style></style>
