@@ -5,7 +5,6 @@ defineProps({
     blog: Array,
 });
 const deleteConform = (id) => {
-    console.log(id);
     Inertia.delete(`/inertia/${id}`, {
         onBefore: () => confirm("本当に削除しますか？"),
     });
