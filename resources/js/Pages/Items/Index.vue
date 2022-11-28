@@ -4,12 +4,12 @@ import { Head } from "@inertiajs/inertia-vue3";
 </script>
 
 <template>
-    <Head title="Dashboard" />
+    <Head title="商品一覧" />
 
     <AuthenticatedLayout>
         <template #header>
             <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-                商品管理
+                商品一覧
             </h2>
         </template>
 
